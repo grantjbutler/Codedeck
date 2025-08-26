@@ -27,9 +27,10 @@ public class StreamDeck {
     }
     
     let device: HIDDevice
-    let product: StreamDeckProduct
     var keysPressed = [Int: Bool]()
     var initialDataReceived = false
+    
+    public let product: StreamDeckProduct
 
     public var onKeyDown: ((Int) -> Void)?
     public var onKeyUp: ((Int) -> Void)?
