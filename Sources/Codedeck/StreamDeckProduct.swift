@@ -42,6 +42,14 @@ public enum StreamDeckProduct: CaseIterable {
         }
     }
     
+    public var deviceDimensions: (width: Int, height: Int) {
+        switch self {
+        case .streamDeck: return (width: 5, height: 3)
+        case .streamDeckMini: return (width: 3, height: 2)
+        case .streamDeckXL: return (width: 8, height: 4)
+        }
+    }
+    
     // Internal
     
     internal var vendorId: Int {
